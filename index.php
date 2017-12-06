@@ -7,3 +7,11 @@
  */
 
 echo 'Hello World!';
+//делаем из страницы сайта свежайший "клон" Яндекса
+ //$str = file_get_contents ('http://parsing.valemak.com/ru/php/import/file-get-contents/');
+ //
+
+$text = file_get_contents( 'http://mentor.su/prostoy-parser-na-php/' );
+$newText = preg_replace( '/strong/' ,"i", $text); 
+    
+    echo $newText;
